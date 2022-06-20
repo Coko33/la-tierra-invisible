@@ -1,0 +1,12 @@
+.AddData-button {
+  position: relative;
+  background-color: orangered;
+  border: none;
+  height: 30px;
+  border-radius: 4px;
+  margin-top: 10px;
+  width: 90px;
+  margin-right: 0;
+  margin-left: auto;
+  color: white;
+}

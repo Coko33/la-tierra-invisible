@@ -1,38 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  position: relative;
+  text-align: end;
+  height: 200%;
+  overflow: hidden;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  min-height: 30vh;
   font-size: calc(10px + 2vmin);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 0;
+  color: black;
+  top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-lineaPeluda {
+  width: 60%;
+  pointer-events: none;
+}
+
+/*guarda Pampa*/
+.App-guardaPampa {
+  position: absolute;
+  top: -80px;
+  width: 60px;
+  left: 6%;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.App-guardaPampa img {
+  /* filter: blur(1px) drop-shadow(3px 5px 2px rgb(124, 124, 124)); */
+  fill: rgb(121, 121, 121);
+}
+
+.App-guardaPampa.izq {
+  left: calc(94% - 60px);
+}
+
+.App-lti {
+  position: relative;
+  width: 80%;
+  left: 10%;
+}
+
+/*footer*/
+footer {
+  position: relative;
+  background-color: black;
+  bottom: 0px;
+  left: 0px;
+  top: auto;
+  width: 100%;
+  height: 140px;
+  z-index: 500;
+}
+
+.footer-wrapper {
+  position: relative;
+  top: 23%;
+  width: 70%;
+  height: 54%;
+  left: 15%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  grid-auto-rows: minmax(80%, auto);
+  background-color: #fff;
+}
+
+.footer-logoContainer {
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-logo {
+  position: relative;
+  height: 100%;
+}
+
+.footer-letrasLogoContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.footer-letrasLogo {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+}
+
+.footer-contactContainer {
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.footer-instagramContainer {
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.icon {
+  font-size: 30px;
+  animation: neon 1s infinite linear;
+}
+
+@keyframes neon {
+  0%,
+  10% {
+    color: deepskyblue;
+    filter: drop-shadow(3px 5px 6px deepskyblue);
   }
-  to {
-    transform: rotate(360deg);
+  /*  25% {
+    color: deepskyblue;
+    filter: drop-shadow(3px 5px 12px deepskyblue);
+  }
+  50% {
+    color: lawngreen;
+    filter: drop-shadow(3px 5px 12px lawngreen);
+  }
+  75% {
+    color: yellow;
+    filter: drop-shadow(3px 5px 12px yellow);
+  } */
+  70% {
+    color: deepskyblue;
+    filter: drop-shadow(3px 5px 6px deepskyblue);
+  }
+  80% {
+    color: black;
+  }
+}
+
+.footer-text {
+  color: white;
+  padding-left: 7px;
+  text-align: start;
+}
+
+/*grilla*/
+.grid-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  grid-auto-rows: minmax(200px, auto);
+  width: 70%;
+  left: 15%;
+  margin-bottom: 50px;
+}
+
+.grid-item {
+  background-color: rgb(156, 156, 156);
+}
+
+@media screen and (max-width: 600px) {
+  .App-guardaPampa {
+    width: 30px;
+  }
+  .App-guardaPampa.izq {
+    display: none;
+  }
+
+  .App-header {
+    left: calc(6% + 30px);
+    width: calc(94% - 30px);
+    min-height: 20vh;
+  }
+
+  .App-lineaPeluda {
+    width: 80%;
+    pointer-events: none;
+  }
+
+  .App-lti {
+    width: 100%;
+    left: 0;
+  }
+
+  .App-title {
+    font-size: 30px;
+  }
+
+  /*gilla*/
+  .grid-wrapper {
+    left: calc(6% + 30px + 20px);
+    width: calc(94% - 30px - 40px);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*footer*/
+  .footer-wrapper {
+    grid-template-columns: 30% 40% 30%;
+    width: 88%;
+    left: 6%;
+    grid-gap: 1px;
+  }
+
+  .footer-logo {
+    height: 50%;
+    top: 25%;
+  }
+
+  .footer-letrasLogoContainer {
+    position: relative;
+    top: 25%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-letrasLogo {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .footer-text {
+    font-size: 8px;
+  }
+
+  .footer-contactContainer {
+    padding: 0;
+  }
+
+  .footer-instagramContainer {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .icon {
+    font-size: 20px;
   }
 }
